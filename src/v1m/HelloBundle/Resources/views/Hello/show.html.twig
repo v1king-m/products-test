@@ -1,0 +1,30 @@
+{% extends 'v1mHelloBundle:Hello:layout.html.twig' %}
+{% block title %}{{ path | capitalize }}{% endblock %}
+{% block content %}
+<div class="content">
+{% if path == "hell" %}
+<div>
+<h1><a href="{{ path('v1m_hello', { 'name': name }) }}">Hello {{ name }}!</a></h1></br>
+Locale is: {{ locale }}
+<ul>
+	{% for i in 0..40 %}
+	<li class="{{ cycle(['odd', 'even'], i) }}">
+		{{ i }} - {{ cycle(['четное', 'нечетное'], i) }}
+	</li>
+	{% endfor %}
+</ul>
+</div>
+{% elseif path == "hello" %}
+<div>
+	<h1><a href="{{ path('v1m_hell', { 'name': name }) }}">Go to hell {{ name | upper }}!</a></h1></br>
+	Locale is: {{ locale }}</br>
+	URL: <a href="{{ url }}">{{ url }}</a>
+</div>
+{% else %}
+<div>
+	Куда шел-то? Тут это не там, попробуй еще.
+</div>
+{% endif %}
+</div>
+{% endblock %}
+

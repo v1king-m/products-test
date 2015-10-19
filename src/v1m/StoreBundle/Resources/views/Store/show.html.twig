@@ -1,0 +1,22 @@
+{% extends 'v1mHelloBundle:Hello:layout.html.twig' %}
+{% block title %}Store{% endblock %}
+{% block content %}
+<div class="content">
+	<div>
+		{% if not product %}
+		<p>Продукты не найдены</p>
+		{% else %}
+		<table>
+			<tr><td>Id:</td><td align="right">{{ product.id }}</td>
+			<tr><td>Наименование:</td><td align="right">{{ product.name }}</td>
+			<tr><td>Цена:</td><td align="right">{{ product.price }}</td>
+			<tr><td>Описание:</td><td align="right">{{ product.description }}</td>
+			<tr><td>Категория:</td><td align="right">{{ product.category.name }}</td>
+		</table>
+		{% endif %}
+		<p><a href="{{ path('v1m_store_index') }}">Все продукты</a></p>
+	</div>
+</div>
+{% block msg %}{% endblock %}
+{% endblock %}
+

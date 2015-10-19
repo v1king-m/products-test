@@ -1,0 +1,28 @@
+{% extends 'v1mHelloBundle:Hello:layout.html.twig' %}
+{% block title %}Store{% endblock %}
+{% block content %}
+<div class="content">
+	<div class="products">
+		{% if not products %}
+		<p>Продукты не найдены</p>
+		{% else %}
+		<table>
+			<thead>
+				<tr>
+					<td>Id</td><td>Наименование</td><td>Цена</td><td>Описание</td><td>Категория</td>
+				</tr>
+			</thead>
+			<tbody>
+				{% for product in products %}
+				<tr>
+					<td align="center"><a href="{{ path('v1m_store_show', { 'id': product.id }) }}">{{ product.id }}</a></td><td>{{ product.name }}</td><td align="center">{{ product.price }}</td><td>{{ product.description }}</td><td>{{ product.category.name }}</td>
+				</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+		{% endif %}
+	</div>
+</div>
+{% block msg %}{% endblock %}
+{% endblock %}
+

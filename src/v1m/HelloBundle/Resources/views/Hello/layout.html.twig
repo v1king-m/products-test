@@ -1,0 +1,62 @@
+{% extends '::base.html.twig' %}
+{% block body %}
+
+<div class="main">
+
+	{% block head %}{# Шапка #}
+	<div class="head">
+		<h1>Мега шапко</h1>
+	</div>
+	{% endblock %}{# Шапка #}
+
+	{% block topmenu %}{# Верхнее меню #}
+	<div class="topmenu">
+		<div class="ltmenu">&nbsp;</div>
+		<div class="tmenu">Тыц 1</div>
+		<div class="tmenu">Тыц 2</div>
+		<div class="tmenu">Тыц 3</div>
+		<div class="tmenu">Тыц 4</div>
+		<div class="tmenu">Тыц 5</div>
+	</div>
+	{% endblock %}{# Верхнее меню #}
+
+	{% block leftmenu %}{# Боковое меню #}
+	<div class="lmenu">
+		<ul>
+			<li>Мыню 1</li>
+			<li>Мыню 2</li>
+			<li>Мыню 3
+				<ul>
+					<li>Подмыню 3.1</li>
+					<li>Подмыню 3.2</li>
+					<li>Подмыню 3.3</li>
+				</ul>
+			</li>
+			<li>Мыню 4</li>
+			<li>Мыню 5</li>
+		</ul>
+	</div>
+	{% endblock %}{# Боковое меню #}
+
+	{% block msg %}
+	{% if path == "hell" %}
+	{% for flashMessage in app.session.flashbag.all() %}
+	<div class="lmenu flash-notice">
+		{{ flashMessage[0] }}
+	</div>
+	{% endfor %}
+	{% endif %}
+	{% endblock %}
+	
+	{% block content %}
+	
+	{% endblock %}
+
+	{% block bottom %}{# Подвал #}
+	<div class="bottom">
+		<h1>Подвалчег</h1>
+	</div>
+	{% endblock %}{# Подвал #}
+
+</div>
+{% endblock %}

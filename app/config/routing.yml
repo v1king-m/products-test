@@ -1,0 +1,20 @@
+v1m_store:
+    resource: "@v1mStoreBundle/Resources/config/routing.yml"
+    prefix:   /
+
+v1m_hello:
+    resource: "@v1mHelloBundle/Resources/config/routing.yml"
+    prefix:   /
+
+# v1m_hello:
+#     resource: "@v1mHelloBundle/Controller/"
+#     type:     annotation
+#     prefix:   /
+
+# v1m_hell:
+#     resource: "@v1mHelloBundle/Controller/"
+#     type:     annotation
+
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation

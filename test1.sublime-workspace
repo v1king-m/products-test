@@ -1,0 +1,291 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"r",
+				"rss"
+			],
+			[
+				"_",
+				"_format"
+			],
+			[
+				"Con",
+				"Controller"
+			],
+			[
+				"C",
+				"Controller"
+			],
+			[
+				"S",
+				"Symfony"
+			],
+			[
+				"req",
+				"request"
+			],
+			[
+				"H",
+				"HttpFoundation"
+			],
+			[
+				"set",
+				"setlocale"
+			],
+			[
+				"extends",
+				"extends	extends"
+			],
+			[
+				"ex",
+				"extends	extends"
+			],
+			[
+				"no",
+				"node_lib"
+			],
+			[
+				"node",
+				"node_bin"
+			],
+			[
+				"bs3gl",
+				"bs3-icon:glyphicon	bs3-icon-glyphicon"
+			],
+			[
+				"sfdate",
+				"sfdatetimecolumn	Symfony2 / Model / DateTime column doc"
+			],
+			[
+				"sfen",
+				"sfentityclass	Symfony2 / Entity / Entity class"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 369.0,
+		"last_filter": "Package Control: ",
+		"selected_items":
+		[
+			[
+				"Package Control: ",
+				"Package Control: Remove Package"
+			],
+			[
+				"Package Control",
+				"Package Control: List Packages"
+			],
+			[
+				"Package Control: sy",
+				"Package Control: Add Repository"
+			],
+			[
+				"Snippet: ",
+				"Snippet: #!/usr/bin/env"
+			]
+		],
+		"width": 539.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/viktor/phpprojects/test1",
+		"/home/viktor/phpprojects/test1/src",
+		"/home/viktor/phpprojects/test1/src/AppBundle",
+		"/home/viktor/phpprojects/test1/src/v1m",
+		"/home/viktor/phpprojects/test1/src/v1m/HelloBundle",
+		"/home/viktor/phpprojects/test1/src/v1m/HelloBundle/Controller",
+		"/home/viktor/phpprojects/test1/src/v1m/HelloBundle/Resources",
+		"/home/viktor/phpprojects/test1/src/v1m/HelloBundle/Resources/config",
+		"/home/viktor/phpprojects/test1/src/v1m/HelloBundle/Resources/views",
+		"/home/viktor/phpprojects/test1/src/v1m/HelloBundle/Resources/views/Default",
+		"/home/viktor/phpprojects/test1/src/v1m/TestBundle"
+	],
+	"file_history":
+	[
+		"/home/viktor/phpprojects/test1/src/v1m/TestBundle/v1mTestBundle.php",
+		"/home/viktor/phpprojects/test1/src/v1m/HelloBundle/Controller/DefaultController.php",
+		"/home/viktor/phpprojects/test1/src/v1m/HelloBundle/Controller/HelloController.php",
+		"/home/viktor/phpprojects/test1/src/v1m/HelloBundle/Resources/views/Default/index.html.twig",
+		"/home/viktor/phpprojects/test1/src/v1m/HelloBundle/Resources/config/routing.yml",
+		"/home/viktor/phpprojects/test1/app/AppKernel.php",
+		"/home/viktor/phpprojects/test1/app/config/routing.yml",
+		"/home/viktor/phpprojects/simpleblog/src/v1m/BlogBundle/Controller/DefaultController.php",
+		"/home/viktor/phpprojects/simpleblog/app/config/config.yml",
+		"/home/viktor/phpprojects/simpleblog/app/Resources/views/stylesheets.html.twig",
+		"/home/viktor/phpprojects/simpleblog/app/Resources/public/css/front.less",
+		"/home/viktor/phpprojects/simpleblog/app/config/parameters.yml.dist",
+		"/home/viktor/phpprojects/simpleblog/app/Resources/views/base.html.twig",
+		"/home/viktor/phpprojects/simpleblog/src/v1m/BlogBundle/Resources/views/Post/index.html.twig",
+		"/home/viktor/phpprojects/simpleblog/web/css/blog.css",
+		"/home/viktor/.config/sublime-text-3/Packages/Default/Preferences.sublime-settings",
+		"/home/viktor/phpprojects/simpleblog/app/Resources/public/css/blog.css",
+		"/home/viktor/phpprojects/simpleblog/src/v1m/BlogBundle/Entity/Post.php",
+		"/home/viktor/phpprojects/simpleblog/src/v1m/BlogBundle/Form/PostType.php",
+		"/home/viktor/.config/sublime-text-3/Packages/PhpNamespace/Base File.sublime-settings",
+		"/home/viktor/.config/sublime-text-3/Packages/User/Default (Linux).sublime-keymap",
+		"/home/viktor/.config/sublime-text-3/Packages/PhpNamespace/Default (Linux).sublime-keymap",
+		"/home/viktor/phpprojects/simpleblog.workspace"
+	],
+	"find":
+	{
+		"height": 25.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"indexAction",
+			"Back to the list",
+			"css"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"folders":
+	[
+		{
+			"path": "/home/viktor/phpprojects/test1"
+		}
+	],
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 25.0
+	},
+	"input":
+	{
+		"height": 33.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "",
+	"replace":
+	{
+		"height": 46.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+		"xdebug":
+		{
+			"hide_conflict": false
+		}
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 334.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

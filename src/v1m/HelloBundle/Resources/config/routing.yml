@@ -1,0 +1,19 @@
+# v1m_hell_homepage:
+#     path:     /hell/{name}.{_format}
+#     defaults: { _controller: v1mHelloBundle:Default:index, _format: html }
+#     requirements:
+#      _format:	html|text
+
+# v1m_hello_homepage:
+#     path:     /hello/{name}.{_format}
+#     defaults: { _controller: v1mHelloBundle:Hello:index, _format: html }
+#     requirements:
+#      _format:	html|text
+
+v1m_hell:
+    path: /hell/{name}
+    defaults: { _controller: v1mHelloBundle:Hello:show, path: hell, name: kuku }
+
+v1m_hello:
+    path: /hello/{name}
+    defaults: { _controller: v1mHelloBundle:Hello:show, path: hello, name: kuku }

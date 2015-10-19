@@ -1,0 +1,19 @@
+{% extends '::base.html.twig' %}
+{% block title %}Hell{% endblock %}
+{% block body %}
+{% for flashMessage in app.session.flashbag.all() %}
+<div class="flash-notice">
+	{{ flashMessage[0] }}
+</div>
+{% endfor %}
+
+<h1><a href="/hello/{{ name }}">Go to hell {{ name | upper }}!</a></h1></br>
+Locale is: {{ locale }}
+<div><ul>
+	{% for i in 0..10 %}
+	<li>
+		{{ i }} - {{ cycle(['четное', 'нечетное'], i) }}
+	</li>
+	{% endfor %}
+</ul></div>
+{% endblock %}

@@ -1,0 +1,4 @@
+services:
+#    v1m_hello.example:
+#        class: v1m\HelloBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]

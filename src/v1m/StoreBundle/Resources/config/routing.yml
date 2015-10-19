@@ -1,0 +1,28 @@
+# v1m_store_homepage:
+#     path:     /hello/{name}
+#     defaults: { _controller: v1mStoreBundle:Default:index }
+
+v1m_store_index:
+    path: /
+    defaults: 
+     _controller: v1mStoreBundle:Product:index
+
+v1m_store_create:
+    path: /create
+    defaults: { _controller: v1mStoreBundle:Product:create, name: product1, price: 54.21, description: "This is product #1", category_name: "Category #10"}
+
+v1m_store_show:
+    path: /show/{id}
+    defaults: { _controller: v1mStoreBundle:Product:show}
+
+v1m_store_showall:
+    path: /show
+    defaults: { _controller: v1mStoreBundle:Product:showall}
+
+v1m_store_update:
+    path: /update/{id}
+    defaults: { _controller: v1mStoreBundle:Product:update}
+
+v1m_store_delete:
+    path: /delete/{id}
+    defaults: { _controller: v1mStoreBundle:Product:delete}
