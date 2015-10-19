@@ -3,70 +3,18 @@
 	{
 		"selected_items":
 		[
-			[
-				"r",
-				"rss"
-			],
-			[
-				"_",
-				"_format"
-			],
-			[
-				"Con",
-				"Controller"
-			],
-			[
-				"C",
-				"Controller"
-			],
-			[
-				"S",
-				"Symfony"
-			],
-			[
-				"req",
-				"request"
-			],
-			[
-				"H",
-				"HttpFoundation"
-			],
-			[
-				"set",
-				"setlocale"
-			],
-			[
-				"extends",
-				"extends	extends"
-			],
-			[
-				"ex",
-				"extends	extends"
-			],
-			[
-				"no",
-				"node_lib"
-			],
-			[
-				"node",
-				"node_bin"
-			],
-			[
-				"bs3gl",
-				"bs3-icon:glyphicon	bs3-icon-glyphicon"
-			],
-			[
-				"sfdate",
-				"sfdatetimecolumn	Symfony2 / Model / DateTime column doc"
-			],
-			[
-				"sfen",
-				"sfentityclass	Symfony2 / Entity / Entity class"
-			]
 		]
 	},
 	"buffers":
 	[
+		{
+			"file": "src/v1m/StoreBundle/Entity/Product.php",
+			"settings":
+			{
+				"buffer_size": 2508,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -75,25 +23,17 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 369.0,
+		"height": 390.0,
 		"last_filter": "Package Control: ",
 		"selected_items":
 		[
 			[
 				"Package Control: ",
-				"Package Control: Remove Package"
+				"Package Control: Install Package"
 			],
 			[
-				"Package Control",
-				"Package Control: List Packages"
-			],
-			[
-				"Package Control: sy",
-				"Package Control: Add Repository"
-			],
-			[
-				"Snippet: ",
-				"Snippet: #!/usr/bin/env"
+				"insta",
+				"Package Control: Advanced Install Package"
 			]
 		],
 		"width": 539.0
@@ -118,52 +58,23 @@
 	[
 		"/home/viktor/phpprojects/test1",
 		"/home/viktor/phpprojects/test1/src",
-		"/home/viktor/phpprojects/test1/src/AppBundle",
 		"/home/viktor/phpprojects/test1/src/v1m",
-		"/home/viktor/phpprojects/test1/src/v1m/HelloBundle",
-		"/home/viktor/phpprojects/test1/src/v1m/HelloBundle/Controller",
-		"/home/viktor/phpprojects/test1/src/v1m/HelloBundle/Resources",
-		"/home/viktor/phpprojects/test1/src/v1m/HelloBundle/Resources/config",
-		"/home/viktor/phpprojects/test1/src/v1m/HelloBundle/Resources/views",
-		"/home/viktor/phpprojects/test1/src/v1m/HelloBundle/Resources/views/Default",
-		"/home/viktor/phpprojects/test1/src/v1m/TestBundle"
+		"/home/viktor/phpprojects/test1/src/v1m/StoreBundle",
+		"/home/viktor/phpprojects/test1/src/v1m/StoreBundle/Entity"
 	],
 	"file_history":
 	[
-		"/home/viktor/phpprojects/test1/src/v1m/TestBundle/v1mTestBundle.php",
-		"/home/viktor/phpprojects/test1/src/v1m/HelloBundle/Controller/DefaultController.php",
-		"/home/viktor/phpprojects/test1/src/v1m/HelloBundle/Controller/HelloController.php",
-		"/home/viktor/phpprojects/test1/src/v1m/HelloBundle/Resources/views/Default/index.html.twig",
-		"/home/viktor/phpprojects/test1/src/v1m/HelloBundle/Resources/config/routing.yml",
-		"/home/viktor/phpprojects/test1/app/AppKernel.php",
-		"/home/viktor/phpprojects/test1/app/config/routing.yml",
-		"/home/viktor/phpprojects/simpleblog/src/v1m/BlogBundle/Controller/DefaultController.php",
-		"/home/viktor/phpprojects/simpleblog/app/config/config.yml",
-		"/home/viktor/phpprojects/simpleblog/app/Resources/views/stylesheets.html.twig",
-		"/home/viktor/phpprojects/simpleblog/app/Resources/public/css/front.less",
-		"/home/viktor/phpprojects/simpleblog/app/config/parameters.yml.dist",
-		"/home/viktor/phpprojects/simpleblog/app/Resources/views/base.html.twig",
-		"/home/viktor/phpprojects/simpleblog/src/v1m/BlogBundle/Resources/views/Post/index.html.twig",
-		"/home/viktor/phpprojects/simpleblog/web/css/blog.css",
-		"/home/viktor/.config/sublime-text-3/Packages/Default/Preferences.sublime-settings",
-		"/home/viktor/phpprojects/simpleblog/app/Resources/public/css/blog.css",
-		"/home/viktor/phpprojects/simpleblog/src/v1m/BlogBundle/Entity/Post.php",
-		"/home/viktor/phpprojects/simpleblog/src/v1m/BlogBundle/Form/PostType.php",
-		"/home/viktor/.config/sublime-text-3/Packages/PhpNamespace/Base File.sublime-settings",
-		"/home/viktor/.config/sublime-text-3/Packages/User/Default (Linux).sublime-keymap",
-		"/home/viktor/.config/sublime-text-3/Packages/PhpNamespace/Default (Linux).sublime-keymap",
-		"/home/viktor/phpprojects/simpleblog.workspace"
+		"/home/viktor/.config/sublime-text-3/Packages/Package Control/Package Control.sublime-settings"
 	],
 	"find":
 	{
-		"height": 25.0
+		"height": 0.0
 	},
 	"find_in_files":
 	{
-		"height": 93.0,
+		"height": 0.0,
 		"where_history":
 		[
-			""
 		]
 	},
 	"find_state":
@@ -171,9 +82,6 @@
 		"case_sensitive": false,
 		"find_history":
 		[
-			"indexAction",
-			"Back to the list",
-			"css"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -197,14 +105,45 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "src/v1m/StoreBundle/Entity/Product.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2508,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								152,
+								152
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],
 	"incremental_find":
 	{
-		"height": 25.0
+		"height": 0.0
 	},
 	"input":
 	{
@@ -241,7 +180,7 @@
 	"project": "",
 	"replace":
 	{
-		"height": 46.0
+		"height": 0.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -283,7 +222,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 334.0,
+	"side_bar_width": 311.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
