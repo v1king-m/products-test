@@ -1,0 +1,16 @@
+<div>
+	<div>
+		{% if not task %}
+		<p>Задачи не найдены</p>
+		{% else %}
+		<table>
+			<tr><td>Id:</td><td align="right">{{ task.id }}</td>
+			<tr><td>E-Mail:</td><td align="right">{{ task.email }}</td>
+			<tr><td>Задача:</td><td align="right">{{ task.task }}</td>
+			<tr><td>Дата:</td><td align="right">{{ task.dueDate|date("d-m-Y") }}</td>
+		</table>
+		{% endif %}
+		<p><a href="{{ path('task_new') }}">Новая задача</a></p>
+	</div>
+</div>
+

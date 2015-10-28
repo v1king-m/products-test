@@ -1,0 +1,12 @@
+v1m\TaskBundle\Entity\Task:
+    properties:
+        task:
+            - NotBlank: ~
+        email:
+            - NotBlank: ~
+            - Email:
+               message: The email is not valid.
+               checkMX: true
+        dueDate:
+            - NotBlank: ~
+            - Type: \DateTime

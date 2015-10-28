@@ -1,0 +1,13 @@
+v1m\StoreBundle\Entity\Product:
+    properties:
+        name:
+            - NotBlank: ~
+        price:
+            - NotBlank: ~
+            - Range:
+               min: '0'
+               max: '9999.99'
+        description:
+            - NotBlank: ~
+        category:
+            - NotBlank: ~

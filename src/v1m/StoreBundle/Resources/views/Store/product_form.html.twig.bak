@@ -1,0 +1,22 @@
+{{ form_start(product_form) }}
+<div class="form_raw">
+	{{ form_label(product_form.name, 'Продукт') }}
+	{{ form_widget(product_form.name, {'attr': {'placeholder': 'Название товара'}}) }}
+</div>
+<div class="form_raw">
+	{{ form_label(product_form.price, 'Цена') }}
+	{{ form_widget(product_form.price, {'attr': {'placeholder': 'Цена товара'}}) }}
+</div>
+<div class="form_raw">
+	{{ form_label(product_form.description, 'Описание') }}
+	{{ form_widget(product_form.description, {'attr': {'placeholder': 'Описание товара'}}) }}
+</div>
+<div class="form_raw">
+	{{ form_label(product_form.category, 'Категория') }}
+	{{ form_widget(product_form.category, {'attr': {'placeholder': 'Категория'}}) }}
+</div>
+<div class="form_raw">
+	{{ form_widget(product_form.submit, {'label': 'Сохранить'}) }}
+</div>
+<div class="form_raw">{{ form_rest(product_form) }}</div>
+{{ form_end(product_form) }}

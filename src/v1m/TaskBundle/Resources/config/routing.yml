@@ -1,0 +1,6 @@
+task_new:
+    path:     /task_new
+    defaults: { _controller: v1mTaskBundle:Default:new }
+task_show:
+    path: /task_show/{id}
+    defaults: { _controller: v1mTaskBundle:Default:show}
