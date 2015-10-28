@@ -2,6 +2,13 @@
 {% block title %}Store{% endblock %}
 {% block content %}
 <div class="content">
+{% block messg %}
+	{% for flashMessage in app.session.flashbag.all() %}
+	<div>
+		<p><font color="red">{{ flashMessage[0] }}</font></p>
+	</div>
+	{% endfor %}
+{% endblock %}
 	<div>
 		{% if not product %}
 		<p>Продукты не найдены</p>
@@ -15,6 +22,8 @@
 		</table>
 		{% endif %}
 		<p><a href="{{ path('v1m_store_index') }}">Все продукты</a></p>
+		<p><a href="{{ path('v1m_store_edit', { 'id': product.id }) }}">Редактировать</a></p>
+		<p>{{ form(delete_form) }}</p>
 	</div>
 </div>
 {% block msg %}{% endblock %}

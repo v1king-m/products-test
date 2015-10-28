@@ -4,8 +4,11 @@ namespace v1m\StoreBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpFoundation\Request;
 use v1m\StoreBundle\Entity\Product;
 use v1m\StoreBundle\Entity\Category;
+use v1m\StoreBundle\Form\ProductType;
+use Symfony\Component\Security\Core\SecurityContext;
 
 class ProductController extends Controller
 {
@@ -24,23 +27,50 @@ class ProductController extends Controller
         return $this->render('v1mStoreBundle:Store:index.html.twig', array('products' => $products));
     }
 
-    public function createAction($name, $price, $description, $category_name)
+    public function loginAction()
     {
-        $category = new Category();
-        $category->setName($category_name);
+        $request = $this->getRequest();
+        $session = $request->getSession();
 
+        if ($request->attributes->has(SecurityContext::AUTHENTICATION_ERROR)) {
+            $error = $request->attributes->get(SecurityContext::AUTHENTICATION_ERROR);
+        } else {
+            $error = $session->get(SecurityContext::AUTHENTICATION_ERROR);
+        }
+
+        return $this->render('v1mStoreBundle:Store:login.html.twig', array(
+            'last_username' => $session->get(SecurityContext::LAST_USERNAME),
+            'error' => $error
+        ));
+    }
+
+    public function createAction(Request $request)
+    {
     	$product = new Product();
-    	$product->setName($name);
-    	$product->setPrice($price);
-    	$product->setDescription($description);
-        $product->setCategory($category);
 
-    	$em = $this->getDoctrine()->getEntityManager();
-        $em->persist($category);
-    	$em->persist($product);
-    	$em->flush();
+        $form = $this->createForm(new ProductType(), $product);
 
-    	return new Response('Created product id '.$product->getId().' and category id '.$category->getId());
+        if ($request->getMethod() == 'POST') {
+            $form->bind($request);
+
+            if ($form->isValid()) {
+                // выполняем прочие действие, например, сохраняем задачу в базе данных
+                $em = $this->getDoctrine()->getManager();
+                $em->persist($product);
+                $em->flush();
+
+                $request->getSession()->getFlashBag()->add('notice', 'Добавлен новый продукт.');
+                return $this->redirect($this->get('router')->generate('v1m_store_show', array('id' => $product->getId())));
+            }
+        }
+
+        return $this->render('v1mStoreBundle:Store:create.html.twig', array('product_form' => $form->createView()));
+    }
+
+    public function delete_formAction($id)
+    {
+        $deleteForm = $this->createDeleteForm($id);
+        return $this->render('v1mStoreBundle:Store:del.html.twig', array('delete_form' => $deleteForm->createView()));
     }
 
     public function showAction($id)
@@ -51,8 +81,10 @@ class ProductController extends Controller
     	// if(!$product) {
     	// 	throw $this->createNotFoundException('No product found for id '.$id);
     	// }
+        $deleteForm = $this->createDeleteForm($id);
 
-        return $this->render('v1mStoreBundle:Store:show.html.twig', array('product' => $product));
+
+        return $this->render('v1mStoreBundle:Store:show.html.twig', array('product' => $product, 'delete_form' => $deleteForm->createView()));
     }
 
     public function showallAction()
@@ -68,7 +100,25 @@ class ProductController extends Controller
         return $this->render('v1mStoreBundle:Store:show.html.twig', array('products' => $product));
     }
 
-    public function updateAction($id)
+    public function editAction($id)
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $product = $em->getRepository('v1mStoreBundle:Product')->find($id);
+
+        if (!$product) {
+            throw $this->createNotFoundException('Unable to find Product entity.');
+        }
+
+        $editForm = $this->createEditForm($product);
+        $deleteForm = $this->createDeleteForm($id);
+
+        return $this->render('v1mStoreBundle:Store:edit.html.twig', 
+            array('product' => $product, 'product_form' => $editForm->createView(), 'delete_form' => $deleteForm->createView())
+            );
+    }
+
+    public function updateAction(Request $request, $id)
     {
         $em = $this->getDoctrine()->getEntityManager();
         $product = $em->getRepository('v1mStoreBundle:Product')->find($id);
@@ -77,13 +127,17 @@ class ProductController extends Controller
             throw $this->createNotFoundException('No product found for id '.$id);
         }
 
-        $product->setName('product2');
-        // Заметьте, что в вызове $em->persist($product) нет необходимости. Вспомните, что этот метод 
-        // лишь сообщает Doctrine что нужно управлять или “наблюдать” за объектом $product. 
-        // В данной же ситуации, т. к. объект $product получен из Doctrine, он уже является управляемым.
-        $em->flush();
+        $editForm = $this->createEditForm($product);
+        $deleteForm = $this->createDeleteForm($id);
+        $editForm->handleRequest($request);
 
-        return $this->redirect($this->generateUrl('v1m_store_show', array('id' => $id)));
+        if ($editForm->isValid()) {
+            $em->flush();
+
+            return $this->redirect($this->generateUrl('v1m_store_show', array('id' => $id)));
+        }
+
+        return $this->redirect($this->generateUrl('v1m_store_edit', array('id' => $id)));
     }
 
     public function deleteAction($id)
@@ -98,6 +152,25 @@ class ProductController extends Controller
         $em->remove($product);
         $em->flush();
 
-        return new Response('Product with id '.$id.' is deleted');
+        // return new Response('Product with id '.$id.' is deleted');
+        return $this->redirect($this->generateUrl('v1m_store_index'));
+    }
+    private function createEditForm(Product $product)
+    {
+        $form = $this->createForm(new ProductType(), $product, array(
+            'action' => $this->generateUrl('v1m_store_update', array('id' => $product->getId())),
+            'method' => 'PUT',
+        ));
+
+        return $form;
+    }
+    private function createDeleteForm($id)
+    {
+        return $this->createFormBuilder()
+            ->setAction($this->generateUrl('v1m_store_delete', array('id' => $id)))
+            ->setMethod('DELETE')
+            ->add('submit', 'submit', array('label' => 'Удалить'))
+            ->getForm()
+        ;
     }
 }

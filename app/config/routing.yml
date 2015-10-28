@@ -1,3 +1,7 @@
+v1m_task:
+    resource: "@v1mTaskBundle/Resources/config/routing.yml"
+    prefix:   /
+
 v1m_store:
     resource: "@v1mStoreBundle/Resources/config/routing.yml"
     prefix:   /

@@ -12,6 +12,22 @@ li.odd {
 li.even {
 	font-style: italic;
 }
+.form_raw {
+	clear: both;
+	text-align: right;
+}
+.form_table {
+	padding: 0;
+	border-spacing: 0;
+}
+.page {
+	/*float: left;*/
+}
+.form_raw label {
+	float: left;
+	padding-right: 10px;
+	line-height: 25px;
+}
 .flash-notice {
 	color: red;
 	clear: left;
@@ -45,7 +61,7 @@ li.even {
 .main {
 	width: 80%;
 	min-width: 700px;
-	outline: 1px solid darkcyan;
+	/*outline: 1px solid darkcyan;*/
 	padding: 0;
 	margin: 0 auto;
 }
@@ -74,7 +90,7 @@ li.even {
 }
 .content {
 	padding: 20px 10px 10px 10px;
-	width: 79%;
+	width: 75%;
 	margin: 0 0 10px 21%;
 	min-height: 300px;
 }

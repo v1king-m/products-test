@@ -20,6 +20,7 @@ class AppKernel extends Kernel
             new v1m\HelloBundle\v1mHelloBundle(),
             new v1m\TestBundle\v1mTestBundle(),
             new v1m\StoreBundle\v1mStoreBundle(),
+            new v1m\TaskBundle\v1mTaskBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

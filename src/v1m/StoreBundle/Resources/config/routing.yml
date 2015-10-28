@@ -7,22 +7,41 @@ v1m_store_index:
     defaults: 
      _controller: v1mStoreBundle:Product:index
 
+_login_check:
+    path: /admin/login_check
+
+_login:
+    path: /login
+    defaults: { _controller: v1mStoreBundle:Product:login }
+
+_admin:
+    path: /admin
+    defaults: { _controller: v1mStoreBundle:Product:index }
+
 v1m_store_create:
-    path: /create
-    defaults: { _controller: v1mStoreBundle:Product:create, name: product1, price: 54.21, description: "This is product #1", category_name: "Category #10"}
+    path: /admin/create
+    defaults: { _controller: v1mStoreBundle:Product:create}
 
 v1m_store_show:
-    path: /show/{id}
+    path: /{id}
     defaults: { _controller: v1mStoreBundle:Product:show}
+    methods: GET
 
 v1m_store_showall:
     path: /show
     defaults: { _controller: v1mStoreBundle:Product:showall}
 
 v1m_store_update:
-    path: /update/{id}
+    path: /{id}
     defaults: { _controller: v1mStoreBundle:Product:update}
+    methods: PUT
+
+v1m_store_edit:
+    path: /admin/{id}/edit
+    defaults: { _controller: v1mStoreBundle:Product:edit}
 
 v1m_store_delete:
-    path: /delete/{id}
+    path: /admin/{id}
     defaults: { _controller: v1mStoreBundle:Product:delete}
+    methods: DELETE
+
