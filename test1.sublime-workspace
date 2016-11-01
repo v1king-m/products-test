@@ -3,15 +3,59 @@
 	{
 		"selected_items":
 		[
+			[
+				"v1m",
+				"v1mStoreBundle"
+			],
+			[
+				"te",
+				"text-align"
+			],
+			[
+				"li",
+				"line-height"
+			],
+			[
+				"p",
+				"padding-right"
+			],
+			[
+				"edit",
+				"editForm"
+			],
+			[
+				"get",
+				"getName()	string"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"req",
+				"request"
+			],
+			[
+				"St",
+				"StoreBundle"
+			],
+			[
+				"ts",
+				"task"
+			],
+			[
+				"Ta",
+				"TaskBundle"
+			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "src/v1m/StoreBundle/Entity/Product.php",
+			"file": "src/v1m/StoreBundle/Controller/ProductController.php",
 			"settings":
 			{
-				"buffer_size": 2508,
+				"buffer_size": 5838,
 				"line_ending": "Unix"
 			}
 		}
@@ -57,18 +101,62 @@
 	"expanded_folders":
 	[
 		"/home/viktor/phpprojects/test1",
+		"/home/viktor/phpprojects/test1/app",
+		"/home/viktor/phpprojects/test1/app/config",
 		"/home/viktor/phpprojects/test1/src",
 		"/home/viktor/phpprojects/test1/src/v1m",
+		"/home/viktor/phpprojects/test1/src/v1m/HelloBundle/Controller",
+		"/home/viktor/phpprojects/test1/src/v1m/HelloBundle/Resources",
+		"/home/viktor/phpprojects/test1/src/v1m/HelloBundle/Resources/views",
+		"/home/viktor/phpprojects/test1/src/v1m/HelloBundle/Resources/views/Hello",
 		"/home/viktor/phpprojects/test1/src/v1m/StoreBundle",
-		"/home/viktor/phpprojects/test1/src/v1m/StoreBundle/Entity"
+		"/home/viktor/phpprojects/test1/src/v1m/StoreBundle/Controller",
+		"/home/viktor/phpprojects/test1/src/v1m/StoreBundle/Entity",
+		"/home/viktor/phpprojects/test1/src/v1m/StoreBundle/Form",
+		"/home/viktor/phpprojects/test1/src/v1m/StoreBundle/Resources",
+		"/home/viktor/phpprojects/test1/src/v1m/StoreBundle/Resources/config",
+		"/home/viktor/phpprojects/test1/src/v1m/StoreBundle/Resources/views",
+		"/home/viktor/phpprojects/test1/src/v1m/StoreBundle/Resources/views/Store",
+		"/home/viktor/phpprojects/test1/src/v1m/TaskBundle/Controller",
+		"/home/viktor/phpprojects/test1/src/v1m/TaskBundle/Entity",
+		"/home/viktor/phpprojects/test1/src/v1m/TaskBundle/Form",
+		"/home/viktor/phpprojects/test1/src/v1m/TaskBundle/Resources",
+		"/home/viktor/phpprojects/test1/src/v1m/TaskBundle/Resources/config",
+		"/home/viktor/phpprojects/test1/src/v1m/TaskBundle/Resources/views",
+		"/home/viktor/phpprojects/test1/src/v1m/TaskBundle/Resources/views/Default",
+		"/home/viktor/phpprojects/test1/web",
+		"/home/viktor/phpprojects/test1/web/css"
 	],
 	"file_history":
 	[
+		"/home/viktor/phpprojects/test1/src/v1m/StoreBundle/Resources/views/Store/create.html.twig",
+		"/home/viktor/phpprojects/test1/src/v1m/StoreBundle/Resources/views/Store/del.html.twig",
+		"/home/viktor/phpprojects/test1/src/v1m/StoreBundle/Resources/views/Store/index.html.twig",
+		"/home/viktor/phpprojects/test1/app/config/security.yml",
+		"/home/viktor/phpprojects/test1/src/v1m/StoreBundle/Resources/config/routing.yml",
+		"/home/viktor/phpprojects/test1/src/v1m/StoreBundle/Resources/views/Store/show.html.twig",
+		"/home/viktor/phpprojects/test1/web/css/base.css",
+		"/home/viktor/phpprojects/test1/src/v1m/StoreBundle/Resources/views/Store/login.html.twig",
+		"/home/viktor/phpprojects/test1/src/v1m/StoreBundle/Resources/views/Store/product_form.html.twig",
+		"/home/viktor/phpprojects/test1/src/v1m/StoreBundle/Resources/views/Store/edit.html.twig",
+		"/home/viktor/phpprojects/test1/src/v1m/StoreBundle/Form/ProductType.php",
+		"/home/viktor/phpprojects/test1/src/v1m/StoreBundle/Resources/config/validation.yml",
+		"/home/viktor/phpprojects/test1/src/v1m/StoreBundle/Entity/Category.php",
+		"/home/viktor/phpprojects/test1/src/v1m/StoreBundle/Entity/Product.php",
+		"/home/viktor/phpprojects/test1/src/v1m/StoreBundle/Form/CategoryType.php",
+		"/home/viktor/phpprojects/test1/src/v1m/TaskBundle/Controller/DefaultController.php",
+		"/home/viktor/phpprojects/test1/src/v1m/TaskBundle/Resources/views/Default/new.html.twig",
+		"/home/viktor/phpprojects/test1/src/v1m/TaskBundle/Form/TaskType.php",
+		"/home/viktor/phpprojects/test1/src/v1m/TaskBundle/Entity/Task.php",
+		"/home/viktor/phpprojects/test1/src/v1m/TaskBundle/Resources/config/routing.yml",
+		"/home/viktor/phpprojects/test1/src/v1m/TaskBundle/Resources/config/validation.yml",
+		"/home/viktor/phpprojects/test1/src/v1m/TaskBundle/Resources/views/Default/show.html.twig",
+		"/home/viktor/phpprojects/test1/src/v1m/TaskBundle/Entity/Task/Task.php",
 		"/home/viktor/.config/sublime-text-3/Packages/Package Control/Package Control.sublime-settings"
 	],
 	"find":
 	{
-		"height": 0.0
+		"height": 25.0
 	},
 	"find_in_files":
 	{
@@ -82,6 +170,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"edit_form",
+			"create_form",
+			"edit_form"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -89,6 +180,9 @@
 		"regex": false,
 		"replace_history":
 		[
+			"product_form",
+			"edit_form",
+			"create_form"
 		],
 		"reverse": false,
 		"show_context": true,
@@ -110,19 +204,19 @@
 			[
 				{
 					"buffer": 0,
-					"file": "src/v1m/StoreBundle/Entity/Product.php",
+					"file": "src/v1m/StoreBundle/Controller/ProductController.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2508,
+						"buffer_size": 5838,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								152,
-								152
+								2317,
+								2317
 							]
 						],
 						"settings":
@@ -143,7 +237,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 0.0
+		"height": 25.0
 	},
 	"input":
 	{
@@ -180,7 +274,7 @@
 	"project": "",
 	"replace":
 	{
-		"height": 0.0
+		"height": 64.0
 	},
 	"save_all_on_build": true,
 	"select_file":
